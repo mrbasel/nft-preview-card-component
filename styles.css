@@ -1,0 +1,144 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-dark-blue: hsl(217, 54%, 11%);
+  --card-dark-blue: hsl(216, 50%, 16%);
+  --line-dark-blue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--main-dark-blue);
+  color: var(--white);
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card {
+  max-width: 340px;
+  padding: 1rem 1.2rem;
+  background-color: var(--card-dark-blue);
+  border-radius: 10px;
+}
+
+.card figure {
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.card figure:hover {
+  background-color: var(--cyan);
+}
+
+.card figure:hover > img {
+  opacity: 0.6;
+}
+
+.card figure:hover .overlay {
+  opacity: 1;
+}
+
+.card .overlay {
+  position: absolute;
+  width: 50px;
+  opacity: 0;
+}
+
+.card h1 {
+  font-size: 1.4rem;
+}
+
+.card p {
+  color: var(--soft-blue);
+}
+
+.card strong {
+  color: var(--white);
+}
+
+.card .row {
+  display: flex;
+  align-items: center;
+}
+
+.card .card-details {
+  justify-content: space-between;
+}
+
+.card .price {
+  color: var(--cyan);
+}
+
+.card .ethereum {
+  width: 12px;
+  margin-right: 6px;
+}
+
+.card .clock {
+  width: 18px;
+  margin-right: 6px;
+}
+
+.card .row span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card strong:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.card h1:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+footer .row {
+  border-top: 3px solid var(--line-dark-blue);
+  padding: 0.5rem 0;
+}
+
+.avatar {
+  width: 40px;
+  border: 1px solid var(--white);
+  border-radius: 30px;
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    width: 300px;
+  }
+}
